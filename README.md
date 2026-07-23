@@ -1,4 +1,3 @@
-# Global-life-expectancy-classification
 <p align="center">
   <img src="Resim1.png"
        alt="Küresel Yaşam Beklentisi Sınıflandırması"
@@ -13,6 +12,19 @@
   <img src="https://img.shields.io/badge/Lisans-MIT-yellow?style=flat-square">
 </p>
 
+## Araştırma Sorusu
+
+**Mutluluk ve sosyoekonomik göstergeler kullanılarak ülkelerin yaşam beklentisi düzeyleri sınıflandırılabilir mi?**
+
+## Kullanılan Teknolojiler
+
+- Python
+- pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- scikit-learn
+
 ## Proje Hakkında
 
 Bu projede, ülkelerin mutluluk ve sosyoekonomik göstergeleri kullanılarak yaşam beklentisi düzeylerinin sınıflandırılması amaçlanmıştır.
@@ -24,14 +36,6 @@ Yaşam beklentisi değişkeni üç sınıfa ayrılmıştır:
 - Düşük yaşam beklentisi
 - Orta yaşam beklentisi
 - Yüksek yaşam beklentisi
-
----
-
-## Araştırma Sorusu
-
-**Mutluluk ve sosyoekonomik göstergeler kullanılarak ülkelerin yaşam beklentisi düzeyleri sınıflandırılabilir mi?**
-
----
 
 ## Veri Seti
 
@@ -63,8 +67,6 @@ Veri setleri ülke ve yıl bilgileri kullanılarak birleştirilmiştir.
 | Yolsuzluk Algısı | Algılanan yolsuzluk düzeyi |
 | Yaşam Beklentisi | Hedef sınıfların oluşturulmasında kullanılan sağlık göstergesi |
 
----
-
 ## Yaşam Beklentisi Sınıfları
 
 | Sınıf | Tanım |
@@ -72,8 +74,6 @@ Veri setleri ülke ve yıl bilgileri kullanılarak birleştirilmiştir.
 | Düşük | 70 yılın altı |
 | Orta | 70–78 yıl arası |
 | Yüksek | 78 yılın üzeri |
-
----
 
 ## Proje İş Akışı
 
@@ -91,8 +91,6 @@ Veri setleri ülke ve yıl bilgileri kullanılarak birleştirilmiştir.
 12. Model değerlendirmesi
 13. Özellik önemi analizi
 
----
-
 ## Kullanılan Makine Öğrenmesi Modelleri
 
 Aşağıdaki sınıflandırma algoritmaları değerlendirilmiştir:
@@ -109,8 +107,6 @@ Model performansları şu metriklerle değerlendirilmiştir:
 - Ağırlıklı F1-skoru
 - Tabakalı 10 katlı çapraz doğrulama
 - Karmaşıklık matrisi
-
----
 
 ## Bulgular
 
@@ -136,10 +132,6 @@ Modelde en etkili değişkenler sırasıyla:
 6. Cömertlik
 
 olarak belirlenmiştir.
-
----
-
-## Görselleştirmeler
 
 ### Model Karşılaştırması
 
@@ -173,153 +165,11 @@ olarak belirlenmiştir.
        width="800">
 </p>
 
----
-
-## Proje Dosya Yapısı
-
-```text
-Global-life-expectancy-classification/
-├── Data/
-│   ├── 2015.csv
-│   ├── 2016.csv
-│   ├── 2017.csv
-│   ├── 2018.csv
-│   ├── 2019.csv
-│   ├── 2020.csv
-│   ├── 2021.csv
-│   ├── 2022.csv
-│   └── dunyabankasi.csv
-│
-├── outputs/
-│   ├── grafik_confusion_matrix.png
-│   ├── grafik_korelasyon_matrisi.png
-│   ├── grafik_model_karsilastirma.png
-│   ├── grafik_ozellik_onemi.png
-│   ├── hist_Kisi_Basi_GSYH.png
-│   ├── hist_Mutluluk_Skoru.png
-│   ├── hist_Yasam_Beklentisi.png
-│   ├── model_sonuclari.csv
-│   ├── outlier_ozet_iqr.csv
-│   └── gridsearch_best.txt
-│
-├── LICENSE
-├── Life_Expectancy_Analysis-Report.pdf
-├── README.md
-├── Resim1.png
-├── life_expectancy_analysis.py
-└── proje_veri_seti.csv
-```
-
----
-
-## Kurulum
-
-Projeyi bilgisayarınıza klonlayın:
-
-```bash
-git clone https://github.com/Haticeikkan/Global-life-expectancy-classification.git
-cd Global-life-expectancy-classification
-```
-
-Sanal ortam oluşturun:
-
-```bash
-python -m venv .venv
-```
-
-Windows üzerinde sanal ortamı etkinleştirin:
-
-```bash
-.venv\Scripts\activate
-```
-
-Gerekli Python kütüphanelerini yükleyin:
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-```
-
----
-
-## Projenin Çalıştırılması
-
-Ana proje klasöründe aşağıdaki komutu çalıştırın:
-
-```bash
-python life_expectancy_analysis.py
-```
-
-Oluşturulan grafikler, model sonuçları ve özet tablolar `outputs` klasörüne kaydedilir.
-
-Birleştirilmiş veri seti ise şu dosyada saklanır:
-
-```text
-proje_veri_seti.csv
-```
-
----
-
-## Oluşturulan Çıktılar
-
-Analiz sonucunda aşağıdaki çıktılar oluşturulmaktadır:
-
-- Temizlenmiş ve birleştirilmiş veri seti
-- Tanımlayıcı istatistikler
-- Dağılım grafikleri
-- Kutu grafikleri
-- IQR tabanlı aykırı değer özeti
-- Korelasyon matrisi
-- Model karşılaştırma sonuçları
-- Hiperparametre optimizasyon sonuçları
-- Karmaşıklık matrisi
-- Özellik önemi analizi
-
----
-
 ## Proje Raporu
 
 Projenin ayrıntılı raporuna aşağıdaki bağlantıdan ulaşılabilir:
 
 [Proje raporunu görüntüle](Life_Expectancy_Analysis-Report.pdf)
-
----
-
-## Kullanılan Teknolojiler
-
-- Python
-- pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- scikit-learn
-
----
-
-## Sınırlılıklar
-
-- Analiz ülke düzeyindeki gözlemsel verilere dayanmaktadır.
-- Bulgular nedensel ilişki olarak yorumlanmamalıdır.
-- Ülkeler ve yıllar arasında farklı raporlama standartları bulunabilir.
-- Ülke ortalamaları bireysel sağlık sonuçlarını temsil etmez.
-- Aynı ülkeler birden fazla yılda yer aldığı için gözlemler tamamen bağımsız olmayabilir.
-- Ülke bazlı gruplandırılmış doğrulama, daha temkinli bir performans tahmini sağlayabilir.
-
----
-
-## Gelecek Geliştirmeler
-
-Projenin ilerleyen aşamalarında şu geliştirmeler yapılabilir:
-
-- Ülke bazlı grup çapraz doğrulama
-- Zaman duyarlı model doğrulama
-- Regresyon tabanlı yaşam beklentisi tahmini
-- Sağlık harcamaları ve eğitim göstergelerinin eklenmesi
-- SHAP tabanlı model açıklanabilirliği
-- Etkileşimli veri görselleştirmeleri
-- Otomatik veri toplama ve ön işleme
-- Modelin web uygulaması olarak sunulması
-
----
 
 ## Yazar
 
@@ -328,10 +178,4 @@ Projenin ilerleyen aşamalarında şu geliştirmeler yapılabilir:
 Bilgisayar Mühendisliği Yüksek Lisans Öğrencisi
 
 - GitHub: [Haticeikkan](https://github.com/Haticeikkan)
-- LinkedIn: [Hatice İkkan](https://www.linkedin.com/in/Haticeikkan/)
 
----
-
-## Lisans
-
-Bu proje MIT Lisansı ile lisanslanmıştır. Ayrıntılar için [LICENSE](LICENSE) dosyasına bakabilirsiniz.
